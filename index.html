@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Champions League Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="header-content">
+    <span class="logo">⭐</span>
+    <h1>Champions League Hub</h1>
+  </div>
+  <p class="subtitle">Resultados, proximos partidos y tabla de posiciones en vivo</p>
+</header>
 
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="proximos">Proximos Partidos</button>
+  <button class="tab-btn" data-tab="resultados">Resultados</button>
+  <button class="tab-btn" data-tab="tabla">Tabla de Posiciones</button>
+</nav>
+
+<main>
+  <section id="proximos" class="tab-content active">
+    <div class="loader" id="loader-proximos">Cargando partidos...</div>
+    <div class="cards-grid" id="proximos-container"></div>
+  </section>
+
+  <section id="resultados" class="tab-content">
+    <div class="loader" id="loader-resultados">Cargando resultados...</div>
+    <div class="cards-grid" id="resultados-container"></div>
+  </section>
+
+  <section id="tabla" class="tab-content">
+    <div class="loader" id="loader-tabla">Cargando tabla...</div>
+    <div class="table-wrapper" id="tabla-container"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Datos proporcionados por <a href="https://www.thesportsdb.com/" target="_blank" rel="noopener">TheSportsDB API</a> &middot; Proyecto final LINQ03.2</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
