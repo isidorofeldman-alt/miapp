@@ -12,13 +12,15 @@
     <span class="logo">⭐</span>
     <h1>Champions League Hub</h1>
   </div>
-  <p class="subtitle">Resultados, proximos partidos y tabla de posiciones en vivo</p>
+  <p class="subtitle">Resultados, proximos partidos, tabla de posiciones y brackets en vivo</p>
 </header>
 
 <nav class="tabs">
   <button class="tab-btn active" data-tab="proximos">Proximos Partidos</button>
   <button class="tab-btn" data-tab="resultados">Resultados</button>
   <button class="tab-btn" data-tab="tabla">Tabla de Posiciones</button>
+  <button class="tab-btn" data-tab="bracket-pasado">Bracket Temporada Pasada</button>
+  <button class="tab-btn" data-tab="mi-bracket">Arma tu Bracket Perfecto</button>
 </nav>
 
 <main>
@@ -35,6 +37,21 @@
   <section id="tabla" class="tab-content">
     <div class="loader" id="loader-tabla">Cargando tabla...</div>
     <div class="table-wrapper" id="tabla-container"></div>
+  </section>
+
+  <section id="bracket-pasado" class="tab-content">
+    <p class="section-intro">Cuadro real de eliminatorias de la temporada 2025-2026: octavos, cuartos, semifinal y final, con datos obtenidos en vivo desde la API.</p>
+    <div class="loader" id="loader-bracket-pasado">Cargando bracket de la temporada pasada...</div>
+    <div id="bracket-pasado-container"></div>
+  </section>
+
+  <section id="mi-bracket" class="tab-content">
+    <p class="section-intro">Elige el ganador de cada partido y arma tu bracket perfecto hasta coronar al campeon. Tu progreso se guarda automaticamente en este navegador.</p>
+    <div class="loader" id="loader-mi-bracket">Cargando equipos...</div>
+    <div class="bracket-toolbar">
+      <button id="reset-bracket-btn" class="reset-btn">Reiniciar Bracket</button>
+    </div>
+    <div id="mi-bracket-container" class="bracket-wrapper"></div>
   </section>
 </main>
 
